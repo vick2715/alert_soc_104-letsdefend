@@ -32,7 +32,7 @@
 
 ## 📋 Visão Geral do Alerta
 
-<img width="1226" height="596" alt="Captura de tela 2026-07-14 170303" src="https://github.com/user-attachments/assets/d1c96269-45dc-4618-8e8f-38e81d472340" />
+<img width="1226" height="596" alt="Captura de tela 2026-07-14 170303" src="https://github.com/user-attachments/assets/d1e2ed6a-11a1-417a-82b2-5cfc27c9a267" />
 
 ---
 | Campo | Valor |
@@ -71,7 +71,7 @@ O alerta **EventID 36** foi recebido no **Investigation Channel** classificado c
 ### 2️⃣ Análise do Arquivo (VirusTotal)
 O hash do arquivo foi submetido ao **VirusTotal**, retornando:
 
-<img width="1520" height="696" alt="Captura de tela 2026-07-14 170354" src="https://github.com/user-attachments/assets/f6420b72-8fbc-49f4-8ca7-2391e03c12de" />
+<img width="1520" height="696" alt="Captura de tela 2026-07-14 170354" src="https://github.com/user-attachments/assets/f676c5ed-e9bc-4af0-ba46-98eee7b837f3" />
 
 ---
 - **63 / 70 vendors** classificaram o arquivo como **malicioso**.
@@ -84,7 +84,7 @@ O hash do arquivo foi submetido ao **VirusTotal**, retornando:
 ### 3️⃣ Análise do Endpoint (EDR)
 Consulta ao host `10.15.15.18` no módulo de **Endpoint Security**:
 
-<img width="1245" height="527" alt="Captura de tela 2026-07-14 170445" src="https://github.com/user-attachments/assets/dfad4f10-5cd6-43de-a001-1b72e3ab730b" />
+<img width="1245" height="527" alt="Captura de tela 2026-07-14 170445" src="https://github.com/user-attachments/assets/6332fd72-514e-4f5d-bc1c-0f26f1409c72" />
 
 ---
 | Campo | Valor |
@@ -100,13 +100,13 @@ Consulta ao host `10.15.15.18` no módulo de **Endpoint Security**:
 
 Verificação de **Processos**, **Network Action**, **Terminal History** e **Browser History**: todos retornaram **"No Agent Installed"** — ou seja, não havia telemetria de endpoint disponível para correlacionar atividade local do processo malicioso.
 
-<img width="1241" height="531" alt="Captura de tela 2026-07-14 171008" src="https://github.com/user-attachments/assets/10f303cf-b323-4424-9f44-d31f26bc5fad" />
+<img width="1241" height="531" alt="Captura de tela 2026-07-14 171008" src="https://github.com/user-attachments/assets/10c4e93c-af52-42d4-ba8c-cc012e788e28" />
 
 ---
 ### 4️⃣ Análise de Logs de Rede (Log Management)
 Diante da ausência de dados do EDR, a investigação seguiu para o **Log Management**, filtrando por `Source Address contains "10.15.15.18"`. Foi identificado **1 evento de proxy**:
 
-<img width="1201" height="628" alt="Captura de tela 2026-07-14 170601" src="https://github.com/user-attachments/assets/0dd70329-1b8b-443a-bb2f-a0a64115b55a" />
+<img width="1201" height="628" alt="Captura de tela 2026-07-14 170601" src="https://github.com/user-attachments/assets/441965e4-dc59-4f3d-b53d-41738caf1b66" />
 
 ```
 [Dec, 01, 2020, 10:30 AM]
@@ -123,7 +123,7 @@ URL=http://92.63.8.47/
 ### 5️⃣ Reputação do IP de Destino (C2)
 O IP `92.63.8.47` foi analisado no VirusTotal/AbuseIPDB:
 
-<img width="1517" height="692" alt="Captura de tela 2026-07-14 170914" src="https://github.com/user-attachments/assets/b57cc04c-730d-4f58-bced-2e658a0228af" />
+<img width="1517" height="692" alt="Captura de tela 2026-07-14 170914" src="https://github.com/user-attachments/assets/7e7ee5a1-6474-4b4f-8453-54b3fd7ba60c" />
 
 ---
 - **8 / 91 vendors** marcaram o IP como **malicioso**.
@@ -145,7 +145,7 @@ Com evidências suficientes (hash malicioso + comunicação C2 confirmada), um *
 
 O **Playbook** guiado do SOC foi executado com as seguintes etapas e decisões:
 
-<img width="1192" height="347" alt="Captura de tela 2026-07-14 171228" src="https://github.com/user-attachments/assets/75d96f45-7f35-4138-9a6f-3a1c680772ad" />
+<img width="1192" height="347" alt="Captura de tela 2026-07-14 171228" src="https://github.com/user-attachments/assets/be84b8f5-b101-461a-afbb-09add35fc6a7" />
 
 | Etapa do Playbook | Decisão do Analista | Justificativa |
 |---|---|---|

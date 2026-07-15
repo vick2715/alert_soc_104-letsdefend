@@ -108,6 +108,7 @@ Diante da ausência de dados do EDR, a investigação seguiu para o **Log Manage
 
 <img width="1201" height="628" alt="Captura de tela 2026-07-14 170601" src="https://github.com/user-attachments/assets/441965e4-dc59-4f3d-b53d-41738caf1b66" />
 
+---
 ```
 [Dec, 01, 2020, 10:30 AM]
 source_address = 10.15.15.18

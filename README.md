@@ -148,6 +148,8 @@ O **Playbook** guiado do SOC foi executado com as seguintes etapas e decisões:
 
 <img width="1192" height="347" alt="Captura de tela 2026-07-14 171228" src="https://github.com/user-attachments/assets/be84b8f5-b101-461a-afbb-09add35fc6a7" />
 
+---
+
 | Etapa do Playbook | Decisão do Analista | Justificativa |
 |---|---|---|
 | Malware quarantined/cleaned? | **Not Quarantined** | Arquivo foi permitido (Allowed) e não há evidência de quarentena automática |

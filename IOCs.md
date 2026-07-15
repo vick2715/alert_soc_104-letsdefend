@@ -38,7 +38,3 @@ Host afetado: AdamPRD (10.15.15.18)
 | Usuário | Adam |
 
 ---
-
-## Formato simplificado (para importação em SIEM/TIP)
-
-```
